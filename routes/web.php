@@ -11,12 +11,3 @@ Route::get('/', function () {
 
 
 
-Route::get('/companies', [CompanyController::class, 'index']);
-
-/* Route::post('/tasks/create', [TaskController::class, 'store']); */
-Route::post('/tasks/create', [TaskController::class, 'store'])->middleware('api');
-
-
-Route::get('/test', function () {
-    return response()->json(['message' => 'Test successful']);
-});
